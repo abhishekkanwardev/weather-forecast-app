@@ -6,3 +6,5 @@ This is the Weather forecast Project
 
 https://www.weatherapi.com/
 
+Weather forecast API token is in the .env file
+
