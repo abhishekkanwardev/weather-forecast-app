@@ -1,0 +1,234 @@
+.loader {
+  border: 5px solid #f3f3f334; /* Light gray border */
+  border-top: 5px solid #ffffff; /* Blue border on top */
+  border-radius: 50%; /* Rounded shape */
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite; /* Animation properties */
+}
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #62cff4,
+    #2c67f2
+  ); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.latest_weather {
+  width: 100%;
+  background: linear-gradient(45deg, #62cff4, #2c67f2);
+  padding: 40px 0 80px;
+  position: relative;
+}
+
+.latest_weather:after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(0deg, white, transparent);
+}
+
+.latest_weather ul li {
+  color: #fff;
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.latest_weather ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+}
+
+.latest_weather ul li b {
+  display: block;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.latest_weather .Topheader {
+  margin-bottom: 20px;
+  padding: 30px;
+  background: #00000061;
+  width: 100%;
+  max-width: 300px;
+  display: inline-block;
+  border-radius: 13px;
+}
+
+.latest_weather .Topheader img {
+  max-width: 84px;
+  width: 100%;
+}
+
+.latest_weather .Topheader .inner_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.latest_weather .Topheader .inner_wrap h2 {
+  color: #fff;
+}
+
+.restForecast {
+  display: inline-block;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.restForecast h6.top-title {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  font-weight: normal;
+  position: relative;
+  margin: 0 0 40px;
+}
+
+.restForecast h6.top-title span {
+  background: #fff;
+  padding: 0px 20px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.restForecast h6.top-title:after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  height: 1px;
+  background: #bfbfbf;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+}
+
+ul.forecast-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+}
+
+ul.forecast-list li {
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 6px;
+  transition: 0.4s ease-in-out;
+  padding: 20px 10px;
+}
+
+ul.forecast-list li .temp {
+  font-weight: bold;
+}
+
+ul.forecast-list li .weather-tooltip {
+  font-size: 13px;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+ul.forecast-list li .img-weather:hover .weather-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+ul.forecast-list li .img-weather {
+  position: relative;
+  cursor: pointer;
+}
+
+.latest_weather .Topheader .inner_wrap h2 {
+  margin: 0;
+}
+
+.latest_weather .Topheader .inner_wrap .dayfore-header {
+  color: #fff;
+  font-size: 12px;
+}
+
+.latest_weather .Topheader .inner_wrap .dayfore-header span {
+  position: relative;
+  margin-right: 15px;
+  padding-right: 20px;
+}
+
+.latest_weather .Topheader .inner_wrap .dayfore-header span:after {
+  content: "|";
+  position: absolute;
+  right: 0;
+}
+
+.latest_weather .Topheader .inner_wrap .dayfore-header span:last-child {
+  margin: 0;
+  padding: 0;
+}
+
+.latest_weather .Topheader .inner_wrap .dayfore-header span:last-child:after {
+  content: none;
+}
+
+.no-data-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  flex-direction: column;
+}
+
+.backButton{
+  width:40px;
+  margin-left: 12px;
+}
